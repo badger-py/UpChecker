@@ -25,3 +25,15 @@ UpChecker is a simple opensource project to host it fast on your server and chec
 - [ ] Utils
 - [ ] Web client
 - [ ] Script to easy install UpChecker
+
+## Ideas
+
+- Utils can be on other device
+
+## Server TODO
+
+- [x] Write DB models
+- [ ] Write /api/websites/ (CRUD)
+- [ ] Write /api/websites/categories (CRUD)
+- [ ] Write /api/checks/ (CR)
+- [ ] Auth(just one jwt token)
