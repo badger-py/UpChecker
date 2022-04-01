@@ -7,10 +7,20 @@ UpChecker is a simple opensource project to host it fast on your server and chec
 - Lite to install
 - Lite to use
 
+## Supported message types
+
+- E-mail
+- Telegram
+
+## Supported check types
+
+- status code
+- respoinse body(some part and full)
+
 ## TODO
 
 - [x] Architecture
-- [ ] Design DB
+- [x] Design DB(<https://dbdesigner.page.link/Dc8BxqfhVZsLMeEA9>)
 - [ ] Server
 - [ ] Utils
 - [ ] Web client
