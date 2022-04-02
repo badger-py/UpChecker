@@ -1,11 +1,10 @@
 from fastapi import FastAPI
 
+from endpoints.websites import websites_endpoint
 
-app = FastAPI(title="New FastAPI app",
-	swagger_ui_parameters={"defaultModelsExpandDepth": -1}
-)
+app = FastAPI(title="API for UpChecker",
+              swagger_ui_parameters={"defaultModelsExpandDepth": -1}
+              )
 
 
-@app.get("/")
-async def index():
-    return {"ok":True}
+app.include_router(websites_endpoint, prefix="/api/websites")

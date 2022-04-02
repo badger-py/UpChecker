@@ -25,12 +25,14 @@ class Category(Base):
     url = Column(String(200), nullable=False)
     website_id = Column(Integer, ForeignKey("websites.id"))
     website = relationship("WebSite", back_populates="categories", lazy=True)
-    check_type_id = Column(Integer, ForeignKey("check_types.id", lazy=True))
-    check_type = relationship("CheckType", lazy=True)
+    check_type_id = Column(Integer, ForeignKey("check_types.id"))
+    check_type = relationship("CheckType", lazy=True, uselist=False)
+    # can be "200" if status code or value in response
+    check_required_value = Column(String, nullable=False)
 
-    contact = Column(String)  # can be a chey id in Telegram or e-mail
     message_type_id = Column(
-        Integer, ForeignKey("message_types.id", lazy=True))
+        Integer, ForeignKey("message_types.id"))
+    contact = Column(String)  # can be a chey id in Telegram or e-mail
     message_type = relationship("MessageType", lazy=True)
     checks = relationship("Check", back_populates="category", lazy="dynamic")
 

@@ -7,6 +7,12 @@ UpChecker is a simple opensource project to host it fast on your server and chec
 - Lite to install
 - Lite to use
 
+## Install pip packadges
+
+```bash
+pip install "fastapi[all]" sqlalchemy pytest
+```
+
 ## Supported message types
 
 - E-mail
@@ -33,7 +39,8 @@ UpChecker is a simple opensource project to host it fast on your server and chec
 ## Server TODO
 
 - [x] Write DB models
-- [ ] Write /api/websites/ (CRUD)
+- [x] Write /api/websites/ (CRUD)
 - [ ] Write /api/websites/categories (CRUD)
 - [ ] Write /api/checks/ (CR)
+- [ ] Settings
 - [ ] Auth(just one jwt token)
