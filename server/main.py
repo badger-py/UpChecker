@@ -11,8 +11,3 @@ app = FastAPI(title="API for UpChecker",
 
 
 app.include_router(websites_endpoint, prefix="/api/websites")
-
-
-@app.get("/api")
-def index():
-    return {"ok": True}
