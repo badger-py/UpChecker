@@ -24,8 +24,7 @@ jobs:
   
     - name: Run Tests
       run: |
-        ls
-        pwd
+        cd server
         python3 create_db.py
         pytest tests
   deploy: 
