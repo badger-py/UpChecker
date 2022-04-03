@@ -1,4 +1,5 @@
 from fastapi.testclient import TestClient
+import pytest
 
 from main import app
 
@@ -13,12 +14,6 @@ def test_get_all_websites():
     assert type(response.json()) is list
 
 
-def test_get_website():
-    response = client.get("/api/websites/1")
-    assert response.status_code == 200
-    assert type(response.json()) is dict
-
-
 def test_create_website():
     global website_id
     response = client.post("/api/websites/",
@@ -31,6 +26,13 @@ def test_create_website():
     assert type(response.json()) is dict
 
     website_id = response.json()["id"]
+
+
+def test_get_website():
+    global website_id
+    response = client.get(f"/api/websites/{website_id}")
+    assert response.status_code == 200
+    assert type(response.json()) is dict
 
 
 def test_update_website():
