@@ -39,8 +39,20 @@ pip install "fastapi[all]" sqlalchemy pytest
 ## Server TODO
 
 - [x] Write DB models
-- [x] Write /api/websites/ (CRUD)
+- [x] Write /api/websites/ (*)
 - [ ] Write /api/websites/categories (CRUD)
 - [ ] Write /api/checks/ (CR)
 - [ ] Settings
 - [ ] Auth(just one jwt token)
+
+## Frontend TODO
+
+- [x] PC Desgine (<https://www.figma.com/file/XJ0hUcba3zKXI8W17phZH3/Untitled?node-id=0%3A1>)
+- [ ] Mobile desgine
+- [x] Write hello world
+- [ ] Footer
+- [ ] Write /api/websites/ (CRUD)
+- [ ] Write /api/websites/categories (CRUD)
+- [ ] Write /api/checks/ (CR)
+- [ ] Settings
+- [ ] Make auth(just one jwt token)

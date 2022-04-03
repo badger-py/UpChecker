@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background-color: black;
+}
+
+.logo_type {
+    margin-left: calc(2%);
+    color: white;
+}
