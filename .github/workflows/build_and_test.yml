@@ -43,4 +43,4 @@ jobs:
         script: |
           cd /home/www/UpChecker
           git pull
-          systemclt restart uvicorn_service
+          systemctl restart uvicorn_service
