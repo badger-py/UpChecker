@@ -37,7 +37,7 @@ async def update_website_endpoint(website_id: int, website: WebSiteUpdateSchema,
     return await update_website_service(db=db, website_id=website_id, website=website)
 
 
-@websites_endpoint.delete("/{website_id}")
+@websites_endpoint.delete("/{website_id}", status_code=201)
 async def delete_website_endpoint(website_id: int, db: Session = Depends(get_db)):
     await delete_user_service(db=db, website_id=website_id)
-    return {"ok": True}
+    # return {"ok": True}
