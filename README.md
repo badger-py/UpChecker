@@ -39,10 +39,10 @@ pip install "fastapi[all]" sqlalchemy pytest
 ## Server TODO
 
 - [x] Write DB models
-- [x] Write /api/websites/ (*)
-- [ ] Write /api/websites/categories (CRUD)
-- [ ] Write /api/checks/ (CR)
+- [x] Write /api/websites/ (CRUD)
 - [ ] Settings
+- [x] Write /api/websites/categories (CRUD)
+- [ ] Write /api/checks/ (CR)
 - [ ] Auth(just one jwt token)
 
 ## Frontend TODO

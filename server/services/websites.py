@@ -46,7 +46,7 @@ async def update_website_service(db: Session, website_id: int, website: WebSiteU
         )
 
 
-async def delete_user_service(db: Session, website_id: int):
+async def delete_website_service(db: Session, website_id: int):
     try:
         await delete_website(db=db, website_id=website_id)
     except NotFound:

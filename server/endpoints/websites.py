@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from dependices import get_db
 from schemas.websites import WebSiteInSchema, WebSiteOutSchema, WebSiteOutShortSchema, WebSiteUpdateSchema
-from services.websites import create_website_service, delete_user_service, get_all_websites_service, get_website_service, update_website_service
+from services.websites import create_website_service, delete_website_service, get_all_websites_service, get_website_service, update_website_service
 
 
 websites_endpoint = APIRouter(tags=["Websites"])
@@ -39,5 +39,5 @@ async def update_website_endpoint(website_id: int, website: WebSiteUpdateSchema,
 
 @websites_endpoint.delete("/{website_id}")
 async def delete_website_endpoint(website_id: int, db: Session = Depends(get_db)):
-    await delete_user_service(db=db, website_id=website_id)
+    await delete_website_service(db=db, website_id=website_id)
     return {"ok": True}
