@@ -4,14 +4,40 @@
 }
 
 .page-header {
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    /* to center divs in it */
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
     height: 75px;
     background-color: black;
 }
 
 .logo_type {
-    margin-left: calc(2%);
+    left: 100px;
     color: white;
+    /* canter vertically */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+
+.time {
+    /* canter horr */
+    color: white;
+    font-size: 50px;
+}
+
+.settings-icon {
+    right: 100px;
+    /* canter vertically */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 50px;
 }

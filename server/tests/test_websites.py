@@ -8,6 +8,7 @@ client = TestClient(app)
 website_id: int = 0
 
 
+# TODO: pytest.fixture() LOOK CHAT
 @pytest.mark.run(order=1)
 def test_get_all_websites():
     response = client.get("/api/websites/")
