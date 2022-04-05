@@ -19,7 +19,3 @@ var app = Vue.createApp({
         }
     }
 }).mount('#app')
-
-// app.component(
-//     'Footer'
-// )

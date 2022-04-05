@@ -10,7 +10,7 @@ UpChecker is a simple opensource project to host it fast on your server and chec
 ## Install pip packadges
 
 ```bash
-pip install "fastapi[all]" sqlalchemy pytest
+pip install "fastapi[all]" sqlalchemy pytest pytest-ordering
 ```
 
 ## Supported message types
