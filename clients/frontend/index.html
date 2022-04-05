@@ -10,17 +10,12 @@
 
 <body>
     <div id="app">
-        <header class="page-header">
-            <h2 class="logo_type">UpChecker</h2>
-            <h2 class="time position-absolute top-50 start-50 translate-middle">{{getCurrentTime()}}</h2>
-            <a href="settings.html"><img src="img/settings.png" alt="Settings" class="settings-icon"></a>
-            <!-- TODO: pencil -->
-        </header>
+        <page-header></page-header>
         <!-- <img src="img/pencil.png" alt="Edit" class="pencil_icon"> -->
         <h1 style="color: red"> {{message}}</h1>
     </div>
 
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 
 </html>
