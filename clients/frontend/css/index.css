@@ -42,3 +42,18 @@
     transform: translateY(-50%);
     font-size: 50px;
 }
+
+@media (max-width: 900px) {
+    .logo_type {
+        left: 15px;
+        font-size: 20px;
+    }
+    .time {
+        font-size: 25px;
+    }
+    .settings-icon {
+        right: 15px;
+        max-width: 10%;
+        max-height: auto;
+    }
+}
