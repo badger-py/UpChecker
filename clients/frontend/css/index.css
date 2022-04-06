@@ -11,6 +11,7 @@
     margin-right: 0;
     height: 75px;
     background-color: black;
+    /* TODO: adaptiv from 900px */
 }
 
 .logo_type {
