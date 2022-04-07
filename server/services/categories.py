@@ -22,15 +22,7 @@ async def get_category_service(db: Session, category_id: int) -> CategoryOutSche
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND, detail="Website not found")
 
-    return CategoryOutSchema(
-        id=category.id,
-        name=category.name,
-        url=category.url,
-        check_type=category.check_type,
-        check_required_value=category.check_required_value,
-        message_type=category.message_type,
-        contact=category.contact
-    )
+    return CategoryOutSchema.from_orm(category)
 
 
 async def create_category_service(db: Session, category: CategoryInSchema) -> CategoryOutSchema:

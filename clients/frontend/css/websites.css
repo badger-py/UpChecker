@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wesbites-text {
+    margin-top: 25px;
+    margin-left: 200px;
+    font-size: 50px
+}
+
+.add-new-websiite-button {
+    float: right;
+    margin-right: 100px;
+    margin-top: 0;
+    width: 300px;
+    height: 62.5px;
+    /* font-size: 75px; in html tag h1 */
+    background: #4F2CDC;
+}
