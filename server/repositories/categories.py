@@ -19,15 +19,7 @@ async def get_category(db: Session, category_id: int) -> Category:
 
 
 async def create_category(db: Session, category: CategoryInSchema) -> Category:
-    created_category = Category(
-        name=category.name,
-        url=category.url,
-        website_id=category.website_id,
-        check_type_id=category.check_type_id,
-        check_required_value=category.check_required_value,
-        message_type_id=category.message_type_id,
-        contact=category.contact
-    )
+    created_category = Category(**category.dict())
     db.add(created_category)
     db.commit()
     db.refresh(created_category)

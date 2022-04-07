@@ -19,11 +19,8 @@ async def get_website(db: Session, website_id: int) -> WebSite:
 
 
 async def create_website(db: Session, website: WebSiteInSchema) -> WebSite:
-    created_website = WebSite(
-        name=website.name,
-        url=website.url,
-        is_paused=website.is_paused
-    )
+    created_website = WebSite(**website.dict())
+
     db.add(created_website)
     db.commit()
     db.refresh(created_website)
