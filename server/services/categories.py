@@ -33,7 +33,7 @@ async def create_category_service(db: Session, category: CategoryInSchema) -> Ca
 
 async def update_category_service(db: Session, category_id: int, category: CategoryUpdateSchema) -> CategoryOutSchema:
     try:
-        return CategoryOutSchema.from_orm(repository.update(db=db, pk=category_id, schema=category))
+        return CategoryOutSchema.from_orm(await repository.update(db=db, pk=category_id, schema=category))
     except NotFound:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

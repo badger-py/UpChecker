@@ -35,7 +35,7 @@ async def get_website_service(db: Session, website_id: int) -> CategoryOutSchema
 
 
 async def create_website_service(db: Session, website: WebSiteInSchema) -> WebSiteOutShortSchema:
-    return WebSiteOutShortSchema.from_orm(await repository.create(db=db, pk=website))
+    return WebSiteOutShortSchema.from_orm(await repository.create(db=db, schema=website))
 
 
 async def update_website_service(db: Session, website_id: int, website: WebSiteUpdateSchema) -> WebSiteOutShortSchema:
